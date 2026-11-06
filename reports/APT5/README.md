@@ -13,9 +13,11 @@ The assessment focuses on APT5's targeting of the Defense Industrial Base (DIB),
 - Distinguish historical operations from recently reported targeting activity.
 
 ## Full Intelligence Report
-The complete assessment is available in PDF format.
 
-[View Intelligence Assessment](./APT5-Intelligence-Report.pdf)
+The complete assessment is available in two formats:
+
+- [Read Full Assessment on GitHub](./assessment.md)
+- [View PDF Intelligence Report](./APT5-Intelligence-Report.pdf)
 
 ## Research Tools
 - OpenCTI
