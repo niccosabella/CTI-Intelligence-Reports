@@ -1,7 +1,5 @@
 # APT29: Cloud Identity Threat Profile
 
-Status: publication draft for author review.
-
 **Review date:** November 7, 2026  
 **Evidence scope:** Selected reporting from January 2024 through the October 5, 2026 source update  
 **Collection cutoff:** November 7, 2026  
