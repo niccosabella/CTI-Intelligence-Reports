@@ -11,6 +11,7 @@ These reports emphasize threats targeting the Defense Industrial Base (DIB) and 
 | Threat Actor | Research Focus | Report |
 |---|---|---|
 | APT5 | DIB targeting, historical infrastructure, ATT&CK mapping, and attribution analysis | [View Assessment](./reports/APT5/README.md) |
+| APT29 | Cloud identity threats, Diamond Model analysis, ATT&CK mapping, and defensive priorities | [View Assessment](./reports/APT29/assessment.md) |
 
 ## Research Methodology
 
