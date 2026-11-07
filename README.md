@@ -21,7 +21,7 @@ My assessments follow a structured CTI research process:
 2. Campaign and targeting analysis
 3. MITRE ATT&CK technique mapping
 4. Infrastructure and attribution assessment
-5. Intelligence documentation using OpenCTI and MISP
+5. Intelligence documentation, including OpenCTI and MISP where applicable
 6. Analytical confidence evaluation and identification of intelligence gaps
 
 ## Tools and Frameworks
