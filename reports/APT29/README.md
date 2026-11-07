@@ -6,10 +6,10 @@ This project examines APT29’s cloud identity operations and their relevance to
 
 The assessment draws on public government and vendor reporting. It distinguishes reported activity from analytical judgments and identifies gaps that limit its conclusions.
 
-## Reports and Research
+## Assessment and Supporting Evidence
 
 - [Read the threat actor profile](assessment.md)
-- [View infrastructure research notes](infrastructure-notes.md)
+- [View the Infrastructure Appendix](infrastructure-notes.md)
 
 ## Research Objectives
 
@@ -17,7 +17,7 @@ The assessment draws on public government and vendor reporting. It distinguishes
 - Analyze a reported cloud intrusion using the Diamond Model.
 - Map five documented behaviors to MITRE ATT&CK techniques.
 - Identify defender observables and prioritized defensive actions.
-- Preserve sourced infrastructure leads for further passive research.
+- Document reported infrastructure with source provenance and attribution limits.
 
 ## Scope and Methodology
 
@@ -25,7 +25,7 @@ The profile uses selected reporting from 2024 through an October 2026 source upd
 
 Research combines public-source analysis, the Diamond Model, and MITRE ATT&CK mapping. No organization-specific telemetry was examined, and proposed detection ideas have not been tested.
 
-Infrastructure notes preserve three defanged observables. Passive infrastructure pivots have not yet been performed.
+The Infrastructure Appendix documents three source-reported observables. Their historical associations are distinguished from unverified current ownership or control.
 
 ## Disclosure
 
