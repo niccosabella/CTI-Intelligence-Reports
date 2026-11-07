@@ -29,6 +29,4 @@ Infrastructure notes preserve three defanged observables. Passive infrastructure
 
 ## Disclosure
 
-AI assisted with research organization and drafting.
-
 This project represents independent research for educational and professional development purposes. It does not represent an official assessment from any employer or government organization.
