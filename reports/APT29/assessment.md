@@ -84,7 +84,7 @@ The cases below remain separate. The source set does not establish a typical dwe
 | --- | --- | --- | --- |
 | January 2024 disclosure | Microsoft cloud intrusion | Test account compromise followed by application-based email access | [S2] |
 | October 22, 2024 onward, as reported October 29 | RDP attachment phishing | Defense organizations among the targets | [S4] |
-| August 29, 2025 publication | Watering-hole investigation | Device-code lures and two saved domains | [S5] |
+| August 29, 2025 publication | Watering-hole investigation | Device-code lures and two reported domains | [S5] |
 | September 29, 2026 activity; October 5 update | CaptiveCrunch resumption | Additional evidence of cloud identity exposure through traveler-focused operations | [S8] |
 
 ## Diamond Model: Microsoft cloud intrusion disclosed January 2024
@@ -145,28 +145,9 @@ The observable column contains proposed investigation leads, not telemetry we co
 
 The supporting behavior is granting mailbox access, not merely creating an application or adding its secret. MITRE's APT29 entry includes application permissions under this technique. Application-only access should not be described as ordinary user-delegated OAuth consent. The historical permission name is preserved as reported; current defensive configuration requires separate validation. [S1] [S2]
 
-## Historical infrastructure
+## Reported infrastructure
 
-### Reported observables
-
-Amazon reported two domains in its August 29, 2025 investigation of an APT29 watering-hole campaign. Its investigation described compromised websites redirecting visitors to infrastructure that imitated Cloudflare verification and lured users into authorizing attacker-controlled devices through Microsoft's device-code flow. These are historical source-reported associations, not independently verified current ownership. [S5]
-
-| Defanged observable | Source-reported role | Time context | Current status |
-| --- | --- | --- | --- |
-| `findcloudflare[.]com` | Actor-controlled redirect destination imitating Cloudflare verification | Report published August 29, 2025; exact registration and activity interval not established here | Not checked |
-| `cloudflare[.]redirectpartners[.]com` | Additional infrastructure observed after disruption, again directing users toward device-code authentication lures | Report published August 29, 2025; exact activity dates not established here | Not checked |
-
-### Research starting point
-
-Selected starting point: `findcloudflare[.]com`. It is directly identified in the source and provides a domain for passive certificate, DNS, and registration-history research. A useful pivot result is not guaranteed. The second observable is a subdomain of `redirectpartners[.]com`; shared parentage or hosting alone would not establish maliciousness of sibling names.
-
-These observables belong to the 2025 campaign, separate from the Diamond Model case. Provider branding in a lure does not establish provider compromise; Amazon reported no compromise of AWS systems. [S5]
-
-### Research method
-
-`cdn-gstat[.]com` is an additional current-year research candidate from Microsoft’s updated network hunting guidance. It is associated with the separate CaptiveCrunch case; current control is unverified. [S8]
-
-The companion [infrastructure ledger](infrastructure-notes.md) records research provenance. Record lookup time, dataset coverage, historical observation dates, exact relationships, and alternative explanations. Treat shared certificates, hosting, or DNS as leads rather than automatic actor attribution. Keep observables defanged in published prose. Research will use third-party records rather than direct connections to suspect infrastructure.
+The [Infrastructure Appendix](infrastructure-notes.md) records three defanged observables identified in vendor reporting, with campaign context, source dates, and attribution limits. The two domains reported by Amazon belong to the 2025 watering-hole investigation. Microsoft lists the third in its 2026 CaptiveCrunch guidance. These associations do not establish current actor control or connect the separate campaigns to the January 2024 Microsoft intrusion. [S5] [S8]
 
 ## Defensive priorities
 
@@ -187,7 +168,7 @@ Protecting human sign-ins does not eliminate malicious application permissions o
 
 ### Response considerations
 
-Proposed response: preserve relevant evidence and scope the incident across accounts, applications, permissions, and accessed mailboxes. Contain affected identities, sessions, application credentials, and unauthorized grants as appropriate to the findings. Verify that access is removed rather than treating a user password reset as complete remediation. No incident response actions have been performed in this exercise.
+Proposed response: preserve relevant evidence and scope the incident across accounts, applications, permissions, and accessed mailboxes. Contain affected identities, sessions, application credentials, and unauthorized grants as appropriate to the findings. Verify that access is removed rather than treating a user password reset as complete remediation. These are response recommendations, not actions performed during this assessment.
 
 ## Intelligence gaps and assessment limits
 
@@ -195,7 +176,7 @@ Proposed response: preserve relevant evidence and scope the incident across acco
 
 - Organizational exposure: account inventories, application grants, sensitive data, control coverage, and partner access are hypothetical or unknown.
 - Current activity: the latest included source update is October 5, 2026. The profile is selective and does not establish activity against this representative organization or continuous activity through the collection cutoff.
-- Infrastructure: exact activity intervals, historical resolutions, certificates, and current control of the saved domains are unverified.
+- Infrastructure: exact activity intervals, historical resolutions, certificates, and current control of the reported domains are unverified.
 - Detection effectiveness: proposed observables have not been tested; logging, retention, licensing, and normal administrative behavior affect visibility.
 - Dwell time and impact: this source set does not establish a typical dwell time or a loss estimate for the representative organization.
 - Attribution: public government and vendor assessments are cited; underlying attribution evidence has not been independently examined.
@@ -238,4 +219,3 @@ Core collection: MITRE [S1], the government advisory [S3], and vendor investigat
 [S5]: https://aws.amazon.com/blogs/security/amazon-disrupts-watering-hole-campaign-by-russias-apt29/
 [S6]: https://learn.microsoft.com/en-us/entra/identity/conditional-access/policy-block-authentication-flows
 [S7]: https://learn.microsoft.com/en-us/entra/identity/conditional-access/workload-identity
-
