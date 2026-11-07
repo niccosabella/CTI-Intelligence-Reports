@@ -9,7 +9,6 @@ The assessment draws on public government and vendor reporting. It distinguishes
 ## Assessment and Supporting Evidence
 
 - [Read the threat actor profile](assessment.md)
-- [View the Infrastructure Appendix](infrastructure-notes.md)
 
 ## Research Objectives
 
