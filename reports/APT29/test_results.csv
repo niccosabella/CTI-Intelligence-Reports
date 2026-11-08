@@ -1,0 +1,19 @@
+Case,Timestamp,RemoteUrl,RemoteIP,Expected,Actual,Passed
+Exact seed,2026-09-26T12:00:00Z,cdn-gstat.com,192.0.2.10,Reported domain or subdomain,Reported domain or subdomain,True
+Subdomain,2026-09-26T12:00:00Z,login.cdn-gstat.com,192.0.2.10,Reported domain or subdomain,Reported domain or subdomain,True
+URL path,2026-09-30T12:00:00Z,https://sslcdnhost.com/path,192.0.2.10,Reported domain or subdomain,Reported domain or subdomain,True
+Prefix lookalike,2026-09-26T12:00:00Z,notcdn-gstat.com,192.0.2.10,No match,No match,True
+Suffix lookalike,2026-09-26T12:00:00Z,cdn-gstat.com.example.org,192.0.2.10,No match,No match,True
+IP only,2026-09-26T12:00:00Z,,154.29.75.245,Reported IP only: check hosting context,Reported IP only: check hosting context,True
+Both match,2026-09-26T12:00:00Z,cdn-gstat.com,154.29.75.245,Reported domain and IP,Reported domain and IP,True
+Case whitespace trailing dot,2026-09-26T12:00:00Z, CDN-GSTAT.COM. ,192.0.2.10,Reported domain or subdomain,Reported domain or subdomain,True
+Port and query,2026-09-30T12:00:00Z,https://sslcdnhost.com:443/path?q=example,192.0.2.10,Reported domain or subdomain,Reported domain or subdomain,True
+Domain in path only,2026-09-26T12:00:00Z,https://example.org/cdn-gstat.com,192.0.2.10,No match,No match,True
+Domain in userinfo only,2026-09-26T12:00:00Z,https://cdn-gstat.com@example.org/,192.0.2.10,No match,No match,True
+Unconfirmed candidate,2026-10-02T12:00:00Z,eglobalconnections.com,192.0.2.10,No match,No match,True
+Candidate with reported IP,2026-10-02T12:00:00Z,eglobalconnections.com,154.29.75.245,Reported IP only: check hosting context,Reported IP only: check hosting context,True
+Before window,2026-08-31T23:59:59Z,cdn-gstat.com,154.29.75.245,No match,No match,True
+Start boundary included,2026-09-01T00:00:00Z,cdn-gstat.com,192.0.2.10,Reported domain or subdomain,Reported domain or subdomain,True
+End boundary excluded,2026-11-01T00:00:00Z,cdn-gstat.com,154.29.75.245,No match,No match,True
+Last second included,2026-10-31T23:59:59Z,sslcdnhost.com,192.0.2.10,Reported domain or subdomain,Reported domain or subdomain,True
+Empty hostname unrelated IP,2026-09-26T12:00:00Z,,192.0.2.10,No match,No match,True
