@@ -10,6 +10,7 @@ It combines a threat actor profile with a passive infrastructure investigation. 
 
 - [Threat Actor Profile](assessment.md) — Actor background, targeting, Diamond Model analysis, five ATT&CK mappings, and defensive priorities.
 - [Infrastructure Investigation](infrastructure-investigation.md) — Registration, certificate, and passive DNS evidence; a Mermaid infrastructure map; and proposed KQL hunting queries.
+- [MISP and OpenCTI Workflow](misp-opencti-workflow.md) — Evidence curation, connector import review, historical DNS relationships, and 18 passing synthetic Python checks. Actual KQL execution remains untested.
 
 ## Research Objectives
 
