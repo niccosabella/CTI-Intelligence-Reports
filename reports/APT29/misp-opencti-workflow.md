@@ -94,4 +94,4 @@ Evidence curation, source provenance, MISP attribute and galaxy modeling, connec
 
 ## Disclosure
 
-AI assisted with workflow guidance, analysis, documentation, and the Python test harness. Findings distinguish observed UI behavior and inspected code from unresolved defaults and analytical interpretation. No claim of newly discovered APT29 infrastructure or production detection validation is made.
+ Findings distinguish observed UI behavior and inspected code from unresolved defaults and analytical interpretation. No claim of newly discovered APT29 infrastructure or production detection validation is made.
